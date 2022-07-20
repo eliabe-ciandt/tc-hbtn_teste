@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TesteEmail {
 
@@ -9,7 +9,7 @@ public class TesteEmail {
 
         String emailTestado = "email_teste@dominio.com.br";
 
-        assertEquals(src.Pessoa.emailValid(emailTestado), true);
+        assertTrue(Pessoa.emailValid(emailTestado));
 
     }
 
@@ -18,7 +18,7 @@ public class TesteEmail {
 
         String emailTestado = "email_testedominio.com.br";
 
-        assertEquals(src.Pessoa.emailValid(emailTestado), false);
+        assertFalse(Pessoa.emailValid(emailTestado));
 
     }
 
@@ -27,7 +27,7 @@ public class TesteEmail {
 
         String emailTestado = "email_teste_muito_longo_nao_deve_ser_valido@dominio.com.br";
 
-        assertEquals(false, src.Pessoa.emailValid(emailTestado));
+        assertEquals(false, Pessoa.emailValid(emailTestado));
 
     }
 }

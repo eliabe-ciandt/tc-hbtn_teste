@@ -3,6 +3,8 @@ package org.example.src;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import static org.example.src.Pessoa.emailValid;
+
 public class TesteEmail extends TestCase {
 
     @Test
@@ -10,7 +12,7 @@ public class TesteEmail extends TestCase {
 
         String emailTestado = "email_teste@dominio.com.br";
 
-        assertTrue(Pessoa.emailValid(emailTestado));
+        assertTrue(emailValid(emailTestado));
 
     }
 
@@ -19,7 +21,7 @@ public class TesteEmail extends TestCase {
 
         String emailTestado = "email_testedominio.com.br";
 
-        assertFalse(Pessoa.emailValid(emailTestado));
+        assertFalse(emailValid(emailTestado));
 
     }
 
@@ -28,7 +30,7 @@ public class TesteEmail extends TestCase {
 
         String emailTestado = "email_teste_muito_longo_nao_deve_ser_valido@dominio.com.br";
 
-        assertEquals(false, Pessoa.emailValid(emailTestado));
+        assertEquals(false, emailValid(emailTestado));
 
     }
 }

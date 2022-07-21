@@ -27,7 +27,7 @@ public class TesteEmail extends TestCase {
 
         String emailTestado = "email_teste_muito_longo_nao_deve_ser_valido@dominio.com.br";
 
-        assertEquals(false, emailValid(emailTestado));
+        assertEquals(false, Pessoa.emailValid(emailTestado));
 
     }
 }

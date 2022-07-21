@@ -1,9 +1,9 @@
-import org.junit.jupiter.api.Test;
-import src.Pessoa;
+package org.example.src;
 
-import static org.junit.jupiter.api.Assertions.*;
+import junit.framework.TestCase;
+import org.junit.Test;
 
-public class TesteEmail {
+public class TesteEmail extends TestCase {
 
     @Test
     public static void testar_email_com_arroba() {

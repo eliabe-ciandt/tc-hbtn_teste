@@ -1,4 +1,4 @@
-package src;
+package org.example.src;
 
 public class Pessoa{
 

@@ -1,9 +1,6 @@
-package org.example.src;
-
 import junit.framework.TestCase;
 import org.junit.Test;
 
-import static org.example.src.Pessoa.emailValid;
 
 public class TesteEmail extends TestCase {
 
@@ -12,7 +9,7 @@ public class TesteEmail extends TestCase {
 
         String emailTestado = "email_teste@dominio.com.br";
 
-        assertTrue(emailValid(emailTestado));
+        assertTrue(Pessoa.emailValid(emailTestado));
 
     }
 
@@ -21,7 +18,7 @@ public class TesteEmail extends TestCase {
 
         String emailTestado = "email_testedominio.com.br";
 
-        assertFalse(emailValid(emailTestado));
+        assertFalse(Pessoa.emailValid(emailTestado));
 
     }
 

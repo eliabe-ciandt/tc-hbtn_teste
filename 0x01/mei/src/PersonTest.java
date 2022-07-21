@@ -16,12 +16,12 @@ public class PersonTest{
     }
 
     @Test
-    public void shwo_full_name() {
+    public void show_full_name() {
         assertEquals("Paul McCartney", paul.fullName());
     }
 
     @Test
-    public void test_clculateYearlySalary() {
+    public void test_calculateYearlySalary() {
         paul.setSalary(1200);
 
         assertEquals(14400f, paul.calculateYearlySalary());
